@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D5B97"/>
+      <stop offset="100%" stop-color="#A0D2DB"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <text x="34" y="66" font-family="Poppins, Georgia, serif" font-size="52" font-weight="700" fill="white" text-anchor="middle">M</text>
+  <text x="68" y="66" font-family="Poppins, Georgia, serif" font-size="52" font-weight="300" fill="rgba(255,255,255,0.72)" text-anchor="middle">H</text>
+  <rect x="18" y="74" width="64" height="4" rx="2" fill="white" opacity="0.45"/>
+</svg>

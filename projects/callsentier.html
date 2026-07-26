@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallSentier Analysis & Automation | Mariam Hanafy</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../logo.png" alt="Mariam Hanafy Logo">
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#experience">Experience</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#education">Education</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <mask class="moon" id="moon-mask"><rect x="0" y="0" width="100%" height="100%" fill="white" /><circle cx="24" cy="10" r="6" fill="black" /></mask>
+                            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                            <g class="sun-beams" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></g>
+                        </svg>
+                    </button>
+                    <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="detail-back-wrap">
+            <a href="../index.html#projects" class="detail-back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <section class="detail-hero">
+            <span class="detail-kicker">Automation & Analytics</span>
+            <h1>CallSentier Analysis & Automation</h1>
+            <p class="detail-tagline">CallSentier is a cloud-based customer support solution that breaks the language barrier between customers and agents: customers speak their own language, agents reply in theirs, and a cloud translator bridges the gap in real time. Built during an AI BootCamp as a full team project.</p>
+            <div class="detail-tags">
+                <span>n8n</span>
+                <span>AWS</span>
+                <span>Airtable</span>
+                <span>Excel</span>
+            </div>
+        </section>
+
+        <div class="detail-gallery">
+            <div class="detail-carousel">
+                <div class="detail-carousel-track">
+                    <img src="../Call Sentier project/Call_Sentier_1.png" alt="CallSentier Excel Dashboard">
+                    <img src="../Call Sentier project/CallSentier Automation Work Flow.png" alt="CallSentier n8n Automation Workflow">
+                </div>
+                <button class="detail-carousel-btn prev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                <button class="detail-carousel-btn next" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                <div class="detail-carousel-counter">1 / 2</div>
+                <div class="detail-carousel-dots">
+                    <button class="detail-carousel-dot active" aria-label="Slide 1"></button>
+                    <button class="detail-carousel-dot" aria-label="Slide 2"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+
+            <h2>Overview</h2>
+            <p>Beyond translation, the team designed a complete workflow that generates real business value: real-time translation between agents and customers, sentiment analysis on every conversation, automated storage of chats and results in Airtable, automatic export to Excel, a live dashboard that refreshes with every interaction, and automated reports sent to managers.</p>
+
+            <h2>Workflow Architecture</h2>
+            <ul class="detail-list">
+                <li><strong>Input:</strong> customer and agent conversations, each in their own language.</li>
+                <li><strong>Processing:</strong> real-time translation through AWS services.</li>
+                <li><strong>Analysis:</strong> sentiment analysis applied to every interaction.</li>
+                <li><strong>Storage:</strong> results pushed automatically into Airtable and exported to Excel.</li>
+                <li><strong>Visualization:</strong> the dashboard updates dynamically with the latest records.</li>
+                <li><strong>Reporting:</strong> automated reports are generated and shared with managers.</li>
+            </ul>
+
+            <h2>Dashboard & Reporting</h2>
+            <p>The Excel dashboard tracks total chats, customers, and agents; average chat duration and messages per chat; sentiment distribution; the most-used languages; sentiment per agent; and conversation trends across weekdays, all with interactive filtering.</p>
+
+            <h2>Automation Workflow</h2>
+            <p>The n8n automation covers the full pipeline: receiving conversations through webhooks, analyzing chat sentiment with AI models, storing records in Airtable, exporting analyzed data to Excel, aggregating it for reporting, and sending automated email reports to managers.</p>
+
+            <h2>How I Built It</h2>
+            <div class="detail-tools-row">
+                <span>n8n — automation workflows</span>
+                <span>AWS — cloud integration</span>
+                <span>Airtable — database</span>
+                <span>Excel — dashboard & reporting</span>
+            </div>
+            <p>My contributions focused on designing and building the n8n automation workflow, creating the Excel dashboard and reporting system, automating the data flow between Airtable and Excel, and building the automated email reporting process.</p>
+
+            <h2>Contributors</h2>
+            <ul class="detail-contributors">
+                <li><a href="https://github.com/ammarmorad24" target="_blank">Ammar Morad (Team Leader)</a></li>
+                <li><a href="https://github.com/MariamHanafy14" target="_blank">Mariam Hanafy</a></li>
+                <li><a href="https://github.com/Nadine305" target="_blank">Nadine Hazem</a></li>
+                <li><a href="https://github.com/zeinab-mohamed0" target="_blank">Zeinab Mohamed</a></li>
+            </ul>
+
+        </div>
+
+        <div class="detail-cta">
+            <a href="https://github.com/MariamHanafy14/CallSentier-Analysis-Automation/blob/main/README.md" target="_blank" class="detail-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mariam Hanafy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

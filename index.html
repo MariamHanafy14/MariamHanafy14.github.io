@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariam Hanafy | Data Analyst</title>
+    <link rel="icon" type="image/svg+xml" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+<nav>
+    <a href="index.html" class="logo">
+        <img src="logo.png" alt="Mariam Hanafy Logo">
+    </a>
+    <div class="nav-right">
+        <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#volunteering">Volunteering</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+        <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+            <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                <mask class="moon" id="moon-mask"><rect x="0" y="0" width="100%" height="100%" fill="white" /><circle cx="24" cy="10" r="6" fill="black" /></mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                <g class="sun-beams" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></g>
+            </svg>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- ================================================== -->
+        <!--                   Hero Section                     -->
+        <!-- ================================================== -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Profile Photo -->
+                    <div class="hero-photo-wrapper">
+                        <img src="my profile photo.png" alt="Mariam Hanafy" class="hero-photo">
+                    </div>
+                    <h1>Mariam Hanafy</h1>
+                    <div class="subtitle-wrapper">
+                        <h2 id="subtitle">Data Analyst</h2>
+                    </div>
+                    <p class="tagline">"Data tells the story, I help you read it."</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="https://drive.google.com/file/d/1ixuGTMuUSyiNwHGaddFv5WG_xXlTjDwF/view?usp=sharing" target="_blank" class="btn btn-secondary">Download CV</a>
+                    </div>
+                    <!-- Hero Social Icons -->
+                    <div class="hero-socials">
+                        <a href="mailto:mariamhanafy14@gmail.com" class="hero-social-link" title="Email Me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mariamhanafy" target="_blank" class="hero-social-link" title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://github.com/MariamHanafy14" target="_blank" class="hero-social-link" title="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================== -->
+        <!--                   About Section                    -->
+        <!-- ================================================== -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I've always been drawn to the stories hidden inside data — because behind every number, there's a decision waiting to be made. As a senior Computer Science student at Cairo University (FCAI), I've spent the past few years turning that curiosity into real skills: building dashboards in Power BI, writing SQL queries, and transforming raw, messy data into insights that actually matter.
+                    <br><br>
+                    I've had the chance to apply this in a real work environment at Almia Chem, where I analyzed ERP data, tracked sales performance, and built reports that supported day-to-day business decisions. Beyond the technical side, I genuinely enjoy sharing knowledge — which is why I've worked as a Data Analysis Instructor at Flashat, and currently lead the Data Analysis Committee at Star Union, mentoring members and driving data projects within the organization.
+                    <br><br>
+                    I'm always looking for opportunities to grow, take on new challenges, and work on projects where data can solve real problems and drive smarter decisions.
+                </p>
+            </div>
+        </section>
+<!-- ================================================== -->
+<!--               Work Experience Section              -->
+<!-- ================================================== -->
+
+<section id="experience">
+    <div class="container">
+        <h2>Work Experience</h2>
+
+        <div class="timeline">
+
+            <!-- Reef Group -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">Data Analyst</h3>
+                            <p class="timeline-company">Reef Group (Cosmetics) &nbsp;·&nbsp; Remote · Part-time</p>
+                        </div>
+                        <span class="timeline-date">Mar 2026 – Present</span>
+                    </div>
+
+                    <ul class="timeline-bullets">
+                        <li>Rewired two Sales Reports to connect them to a new semantic model, ensuring correct data relationships and reporting logic.</li>
+                        <li>Reviewed and validated approximately 36 report pages to ensure consistency across KPIs, measures, and calculations.</li>
+                        <li>Performed data validation and quality checks to ensure reliability and accuracy of reporting outputs.</li>
+                    </ul>
+
+                    <div class="timeline-tags">
+                        <span>Power BI</span>
+                        <span>Microsoft Fabric</span>
+                        <span>Semantic Model</span>
+                        <span>Data Validation</span>
+                        <span>Sales Reporting</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Almia Chem -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="timeline-role">Data Analyst</h3>
+                            <p class="timeline-company">Almia Chem &nbsp;·&nbsp; Full-time</p>
+                        </div>
+                        <span class="timeline-date">Oct 2025 – Feb 2026</span>
+                    </div>
+
+                    <ul class="timeline-bullets">
+                        <li>Analyzed data from the company's ERP system to support reporting and generate actionable business insights.</li>
+                        <li>Prepared daily, weekly, and monthly reports using Excel and Power BI to track KPIs and sales trends.</li>
+                        <li>Analyzed sales data and monitored sales representatives' performance against targets.</li>
+                        <li>Tracked company expenses, purchases, and returns to ensure data accuracy and consistency.</li>
+                        <li>Supported data-driven decision-making through interactive dashboards and clear visual analysis.</li>
+                    </ul>
+
+                    <div class="timeline-tags">
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>ERP</span>
+                        <span>Sales Analysis</span>
+                        <span>Reporting</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================== -->
+<!--               Projects Section              -->
+<!-- ================================================== -->      
+
+        <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+
+                    <!-- Medical Sales Performance Dashboard -->
+                    <div class="project-card">
+                        <div class="card-carousel">
+                            <div class="card-carousel-track">
+                                <img src="Medical Sales Project/Medical_Sales_1.png" alt="Medical Sales Dashboard - Sales Analysis page">
+                                <img src="Medical Sales Project/Medical_Sales_2.png" alt="Medical Sales Dashboard - Target Achievement page">
+                                <img src="Medical Sales Project/Medical_Sales_3.png" alt="Medical Sales Dashboard - Contribution Analysis page">
+                            </div>
+                            <button class="card-carousel-btn prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <button class="card-carousel-btn next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                            <div class="card-carousel-dots">
+                                <button class="card-carousel-dot active" aria-label="Slide 1"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 2"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Medical Sales Performance Dashboard</h3>
+                            <p>A dynamic dashboard to track sales performance and target achievement, featuring a Galaxy Schema data model.</p>
+                            <div class="tools"><span>Power BI</span><span>Excel</span></div>
+                            <a href="projects/medical-sales.html" class="btn-project">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Adventure Works -->
+                    <div class="project-card">
+                        <div class="card-carousel">
+                            <div class="card-carousel-track">
+                                <img src="Adventure works project/Adventure_works_1.png" alt="Adventure Works Dashboard page 1">
+                                <img src="Adventure works project/Adventure_works_2.png" alt="Adventure Works Dashboard page 2">
+                                <img src="Adventure works project/Adventure_works_3.png" alt="Adventure Works Dashboard page 3">
+                                <img src="Adventure works project/Adventure_works_4.png" alt="Adventure Works Dashboard page 4">
+                                <img src="Adventure works project/Adventure_works_5.png" alt="Adventure Works Dashboard page 5">
+                            </div>
+                            <button class="card-carousel-btn prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <button class="card-carousel-btn next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                            <div class="card-carousel-dots">
+                                <button class="card-carousel-dot active" aria-label="Slide 1"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 2"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 3"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 4"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 5"></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Adventure Works | Internet Sales Analysis</h3>
+                            <p>A multi-page dashboard analyzing two years of sales data against budgets, identifying market trends, and informing business strategy.</p>
+                            <div class="tools"><span>Power BI</span><span>SQL</span><span>Excel</span></div>
+                            <a href="projects/adventure-works.html" class="btn-project">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- HR Analysis -->
+                    <div class="project-card">
+                        <div class="card-carousel">
+                            <div class="card-carousel-track">
+                                <img src="HR project/HR_1.png" alt="HR Analysis Dashboard - Overview page">
+                                <img src="HR project/HR_2.png" alt="HR Analysis Dashboard - Compensation page">
+                            </div>
+                            <button class="card-carousel-btn prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <button class="card-carousel-btn next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                            <div class="card-carousel-dots">
+                                <button class="card-carousel-dot active" aria-label="Slide 1"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>HR Analysis Dashboard</h3>
+                            <p>An interactive dashboard analyzing workforce data to understand demographics, identify attrition trends, and support retention strategies.</p>
+                            <div class="tools"><span>Power BI</span><span>DAX</span></div>
+                            <a href="projects/hr-analysis.html" class="btn-project">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sales Analysis Dashboard (Excel) -->
+                    <div class="project-card">
+                        <div class="card-carousel">
+                            <div class="card-carousel-track">
+                                <img src="Sales project/Sales_excel_1.png" alt="Sales Analysis Dashboard - page 1">
+                                <img src="Sales project/Sales_excel_2.png" alt="Sales Analysis Dashboard - page 2">
+                            </div>
+                            <button class="card-carousel-btn prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <button class="card-carousel-btn next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                            <div class="card-carousel-dots">
+                                <button class="card-carousel-dot active" aria-label="Slide 1"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sales Analysis Dashboard (Excel)</h3>
+                            <p>An interactive dashboard built entirely in Excel to analyze over 256M in revenue, identifying sales trends, top products, and high-performing outlets.</p>
+                            <div class="tools"><span>Excel</span><span>Pivot Tables</span></div>
+                            <a href="projects/sales-excel.html" class="btn-project">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Udemy -->
+                    <div class="project-card">
+                        <div class="card-carousel">
+                            <div class="card-carousel-track">
+                                <video src="UDEMY courses project/Udemy courses Dashboard video.mp4" muted loop playsinline preload="metadata"></video>
+                            </div>
+                            <div class="card-carousel-play-badge" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Udemy Courses Performance Analysis</h3>
+                            <p>An interactive dashboard analyzing Udemy's course data to provide insights on revenue, student engagement, and performance optimization for creators and managers.</p>
+                            <div class="tools"><span>Power BI</span><span>Excel</span></div>
+                            <a href="projects/udemy-courses.html" class="btn-project">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CallSentier -->
+                    <div class="project-card">
+                        <div class="card-carousel">
+                            <div class="card-carousel-track">
+                                <img src="Call Sentier project/Call_Sentier_1.png" alt="CallSentier Dashboard">
+                                <img src="Call Sentier project/CallSentier Automation Work Flow.png" alt="CallSentier Automation Workflow">
+                            </div>
+                            <button class="card-carousel-btn prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                            <button class="card-carousel-btn next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                            <div class="card-carousel-dots">
+                                <button class="card-carousel-dot active" aria-label="Slide 1"></button>
+                                <button class="card-carousel-dot" aria-label="Slide 2"></button>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>CallSentier Analysis & Automation</h3>
+                            <p>A smart customer support solution that combines real-time translation, sentiment analysis, workflow automation, and interactive dashboard reporting to monitor customer interactions and agent performance.</p>
+                            <div class="tools">
+                                <span>Excel</span>
+                                <span>n8n</span>
+                                <span>Airtable</span>
+                                <span>AWS</span>
+                            </div>
+                            <a href="projects/callsentier.html" class="btn-project">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+<!-- ================================================== -->
+        <!--                 Education Section                  -->
+        <!-- ================================================== -->
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-card">
+                    <div class="edu-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="edu-body">
+                        <div class="edu-header">
+                            <div>
+                                <h3 class="edu-university">Cairo University</h3>
+                                <p class="edu-faculty">Faculty of Computers & Artificial Intelligence</p>
+                                <p class="edu-major">Major: Decision Support & Operations Research</p>
+                            </div>
+                            <span class="edu-date">Oct 2022 – Jul 2026</span>
+                        </div>
+                        <div class="edu-details">
+                            <div class="edu-badge">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                GPA: 3.27 / 4.0
+                            </div>
+                            <div class="edu-activity">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                Head of Data Analysis Committee — Star Union
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================== -->
+        <!--               Volunteering Section                 -->
+        <!-- ================================================== -->
+        <section id="volunteering">
+            <div class="container">
+                <h2>Volunteering</h2>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Head of Data Analysis Committee</h3>
+                                    <p class="timeline-company">Star Union &nbsp;·&nbsp; Education</p>
+                                </div>
+                                <span class="timeline-date">Nov 2025 – Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Leading the Data Analysis Committee, setting the direction for projects and learning initiatives.</li>
+                                <li>Mentoring members and guiding them through hands-on data analysis projects to build practical skills.</li>
+                                <li>Analyzing Star Union's internal data to generate insights that support better organizational decisions.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Leadership</span>
+                                <span>Mentoring</span>
+                                <span>Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Academic Member – Data Analysis Instructor</h3>
+                                    <p class="timeline-company">Flashat &nbsp;·&nbsp; Education</p>
+                                </div>
+                                <span class="timeline-date">Oct 2025 – Dec 2025</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Conducted online sessions teaching Data Analysis using Excel to students from various backgrounds.</li>
+                                <li>Covered the main stages of data analysis: data cleaning, exploratory analysis, and visualization.</li>
+                                <li>Provided hands-on explanations of Pivot Tables, basic DAX, ETL concepts, data modeling, and dashboard creation.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Teaching</span>
+                                <span>Excel</span>
+                                <span>DAX</span>
+                                <span>Data Modeling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================== -->
+        <!--               Skills Section                       -->
+        <!-- ================================================== -->
+        <section id="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-wrapper">
+                    <div class="skills-category">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Data Analysis & Business Intelligence (BI)</li>
+                            <li>Data Visualization (Power BI)</li>
+                            <li>SQL & Database Design</li>
+                            <li>Python (Pandas)</li>
+                            <li>Advanced Excel (Power Query, DAX)</li>
+                            <li>Data Modeling (Star & Galaxy Schema)</li>
+                            <li>ETL Processes & Data Cleaning</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Analytical Thinking</li>
+                            <li>Problem-Solving</li>
+                            <li>Communication</li>
+                            <li>Teamwork</li>
+                            <li>Attention to Detail</li>
+                            <li>Storytelling with Data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools">
+            <div class="container">
+                <h2>Tools & Technologies</h2>
+                <div class="tools-grid">
+                    <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"><span>Power BI</span></div>
+                    <div class="tool-card"><img src="tool-sql.png" alt="SQL"><span>SQL</span></div>
+                    <div class="tool-card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"><span>Python</span></div>
+                    <div class="tool-card"><img src="tool-excel.png" alt="Excel"><span>Excel</span></div>
+                    <div class="tool-card"><img src="tool-n8n.png" alt="n8n"><span>n8n</span></div>
+                    <div class="tool-card"><img src="microsoft fabric.png" alt="Microsoft Fabric"><span>Fabric</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <div class="container">
+                <h2>Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card" id="cert-1" data-image="cert-1.png">
+                        <img src="cert-1.png" alt="Certificate Thumbnail" class="cert-thumbnail">
+                        <div class="cert-text">
+                            <p>Associate Data Analyst in SQL</p>
+                            <span>DataCamp</span>
+                        </div>
+                    </div>
+                    <div class="cert-card" id="cert-2" data-image="cert-2.png">
+                        <img src="cert-2.png" alt="Certificate Thumbnail" class="cert-thumbnail">
+                        <div class="cert-text">
+                            <p>The Data Analyst Diploma</p>
+                            <span>Dataskool</span>
+                        </div>
+                    </div>
+                    <div class="cert-card" id="cert-3" data-image="cert-3.png">
+                        <img src="cert-3.png" alt="Certificate Thumbnail" class="cert-thumbnail">
+                        <div class="cert-text">
+                            <p>Database Fundamentals</p>
+                            <span>Mahara-Tech</span>
+                        </div>
+                    </div>
+                    <div class="cert-card" id="cert-4" data-image="cert-4.png">
+                        <img src="cert-4.png" alt="Certificate Thumbnail" class="cert-thumbnail">
+                        <div class="cert-text">
+                            <p>SQL Fundamentals</p>
+                            <span>DataCamp</span>
+                        </div>
+                    </div>
+                    <div class="cert-card" id="cert-5" data-image="cert-5.png">
+                        <img src="cert-5.png" alt="Certificate Thumbnail" class="cert-thumbnail">
+                        <div class="cert-text">
+                            <p>SQL (Intermediate)</p>
+                            <span>HackerRank</span>
+                        </div>
+                    </div>
+                    <div class="cert-card" data-image="AI Agents BootCamp.png">
+                        <img src="AI Agents BootCamp.png" alt="Certificate Thumbnail" class="cert-thumbnail">
+                        <div class="cert-text">
+                            <p>AI Agents BootCamp</p>
+                            <span>Cairo University</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ================================================== -->
+        <!--               Contact Section (Enhanced)           -->
+        <!-- ================================================== -->
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm currently seeking new opportunities and am excited to connect. Whether you have a question, a project idea, or just want to say hello — feel free to reach out!</p>
+                <div class="contact-links">
+                    <a href="mailto:mariamhanafy14@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">mariamhanafy14@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariamhanafy" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/mariamhanafy</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/MariamHanafy14" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/MariamHanafy14</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mariam Hanafy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for viewing full-size certificate -->
+    <div id="modal" class="modal">
+        <span class="close-button" id="close-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

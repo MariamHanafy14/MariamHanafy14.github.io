@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Works | Internet Sales Analysis | Mariam Hanafy</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../logo.png" alt="Mariam Hanafy Logo">
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#experience">Experience</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#education">Education</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <mask class="moon" id="moon-mask"><rect x="0" y="0" width="100%" height="100%" fill="white" /><circle cx="24" cy="10" r="6" fill="black" /></mask>
+                            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                            <g class="sun-beams" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></g>
+                        </svg>
+                    </button>
+                    <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="detail-back-wrap">
+            <a href="../index.html#projects" class="detail-back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <section class="detail-hero">
+            <span class="detail-kicker">Power BI Dashboard</span>
+            <h1>Adventure Works | Internet Sales Analysis</h1>
+            <p class="detail-tagline">A comprehensive analysis of internet sales for the global manufacturing company Adventure Works, covering two years of performance. The business request was a dynamic Power BI dashboard to track actual sales against monthly budgets — a tool the management team could explore on their own to find trends and make informed decisions.</p>
+            <div class="detail-tags">
+                <span>Power BI</span>
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>Star Schema</span>
+                <span>DAX</span>
+            </div>
+        </section>
+
+        <div class="detail-gallery">
+            <div class="detail-carousel">
+                <div class="detail-carousel-track">
+                    <img src="../Adventure works project/Adventure_works_1.png" alt="Adventure Works dashboard page 1">
+                    <img src="../Adventure works project/Adventure_works_2.png" alt="Adventure Works dashboard page 2">
+                    <img src="../Adventure works project/Adventure_works_3.png" alt="Adventure Works dashboard page 3">
+                    <img src="../Adventure works project/Adventure_works_4.png" alt="Adventure Works dashboard page 4">
+                    <img src="../Adventure works project/Adventure_works_5.png" alt="Adventure Works dashboard page 5">
+                </div>
+                <button class="detail-carousel-btn prev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                <button class="detail-carousel-btn next" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                <div class="detail-carousel-counter">1 / 5</div>
+                <div class="detail-carousel-dots">
+                    <button class="detail-carousel-dot active" aria-label="Slide 1"></button>
+                    <button class="detail-carousel-dot" aria-label="Slide 2"></button>
+                    <button class="detail-carousel-dot" aria-label="Slide 3"></button>
+                    <button class="detail-carousel-dot" aria-label="Slide 4"></button>
+                    <button class="detail-carousel-dot" aria-label="Slide 5"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+
+            <h2>Key Business Questions</h2>
+            <ul class="detail-list">
+                <li><strong>Overall performance:</strong> total sales revenue, profit, and growth rate over the last two years.</li>
+                <li><strong>Budget vs. actuals:</strong> how actual sales performed against the monthly budget, and which months were over or under target.</li>
+                <li><strong>Product performance:</strong> which categories, subcategories, and products are the top performers.</li>
+                <li><strong>Customer & market analysis:</strong> the most valuable customers and highest-revenue regions.</li>
+                <li><strong>Sales drivers:</strong> the primary reasons customers choose to buy.</li>
+            </ul>
+
+            <h2>Data Sources & Methodology</h2>
+            <div class="detail-tools-row">
+                <span>SQL Database — sales data</span>
+                <span>Excel — sales targets</span>
+                <span>Star Schema modeling</span>
+                <span>DAX measures</span>
+            </div>
+            <p>Historical sales data was extracted with SQL queries, then modeled in Power BI using a Star Schema to build clean relationships between facts (sales) and dimensions (products, customers, dates). Custom DAX measures calculate KPIs like Total Sales, Profit Margin, Growth Rate, and Budget Variance across a multi-page interactive dashboard.</p>
+
+            <h2>Key Findings</h2>
+            <ul class="detail-list">
+                <li><strong>Strong growth:</strong> $22M in sales and $9M in profit over two years, with a 180% year-over-year growth rate and a 41% profit margin.</li>
+                <li><strong>Budget exceeded by 7%</strong> annually, though performance was inconsistent month to month — June was the strongest (149% of target), while July, September, and December fell noticeably short.</li>
+                <li><strong>Bikes lead the way:</strong> Road Bikes and Mountain Bikes are the most profitable subcategories, reflecting strong brand reputation.</li>
+                <li><strong>Two key markets:</strong> the United States and Australia drive the majority of revenue.</li>
+                <li><strong>Price is the top driver</strong> behind purchase decisions, highlighting the strength of the pricing and promotional strategy.</li>
+            </ul>
+
+            <h2>Strategic Recommendations</h2>
+            <div class="detail-recommend-list">
+                <div class="detail-recommend-item">
+                    <h4>Optimize monthly marketing spend</h4>
+                    <p>Shift budget from peak months like June toward underperforming months like July and September to smooth out the sales curve.</p>
+                </div>
+                <div class="detail-recommend-item">
+                    <h4>Double down on key markets</h4>
+                    <p>Increase investment in the USA and Australia through localized campaigns, loyalty programs, and lookalike audiences.</p>
+                </div>
+                <div class="detail-recommend-item">
+                    <h4>Leverage price as a strategic tool</h4>
+                    <p>Keep running competitive promotions, and introduce bundles (e.g. bike + helmet + repair kit) to raise average order value.</p>
+                </div>
+                <div class="detail-recommend-item">
+                    <h4>Focus on high-performing categories</h4>
+                    <p>Keep Road and Mountain Bikes reliably in stock and feature them prominently in marketing and on the homepage.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="detail-cta">
+            <a href="https://github.com/MariamHanafy14/Adventure-works-sales-target-analysis/blob/main/README.md" target="_blank" class="detail-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mariam Hanafy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

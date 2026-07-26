@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Analysis Dashboard | Mariam Hanafy</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../logo.png" alt="Mariam Hanafy Logo">
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#experience">Experience</a></li>
+                        <li><a href="../index.html#projects">Projects</a></li>
+                        <li><a href="../index.html#education">Education</a></li>
+                        <li><a href="../index.html#skills">Skills</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <mask class="moon" id="moon-mask"><rect x="0" y="0" width="100%" height="100%" fill="white" /><circle cx="24" cy="10" r="6" fill="black" /></mask>
+                            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                            <g class="sun-beams" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></g>
+                        </svg>
+                    </button>
+                    <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="detail-back-wrap">
+            <a href="../index.html#projects" class="detail-back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <section class="detail-hero">
+            <span class="detail-kicker">Power BI Dashboard</span>
+            <h1>HR Analysis Dashboard</h1>
+            <p class="detail-tagline">A comprehensive, interactive HR dashboard that turns raw human resources data into actionable insights — helping HR professionals and stakeholders make informed decisions about employee management, attrition, and compensation.</p>
+            <div class="detail-tags">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Data Modeling</span>
+            </div>
+        </section>
+
+        <div class="detail-gallery">
+            <div class="detail-carousel">
+                <div class="detail-carousel-track">
+                    <img src="../HR project/HR_1.png" alt="HR Analysis Dashboard - Overview page">
+                    <img src="../HR project/HR_2.png" alt="HR Analysis Dashboard - Compensation Analysis page">
+                </div>
+                <button class="detail-carousel-btn prev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                <button class="detail-carousel-btn next" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                <div class="detail-carousel-counter">1 / 2</div>
+                <div class="detail-carousel-dots">
+                    <button class="detail-carousel-dot active" aria-label="Slide 1"></button>
+                    <button class="detail-carousel-dot" aria-label="Slide 2"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-content">
+
+            <h2>The Problem & Key Questions</h2>
+            <p>Organizations often struggle to turn HR data into strategic decisions. This dashboard was built to give clear, actionable answers to questions such as:</p>
+            <ul class="detail-list">
+                <li>What is the current state of the workforce — total, current, attrition rate, and vacation employees?</li>
+                <li>How is the workforce distributed across gender, branch, and nationality?</li>
+                <li>What are the key drivers behind employee attrition?</li>
+                <li>How are HR costs allocated across branches, and where can efficiencies be found?</li>
+                <li>How do compensation and allowances vary across branches and employee groups?</li>
+            </ul>
+
+            <h2>The Dashboard</h2>
+            <ul class="detail-list">
+                <li><strong>Overview page:</strong> total employees, current employees, attrition rate, and vacation employees, broken down by gender, branch, and nationality.</li>
+                <li><strong>Compensation Analysis page:</strong> total cost, highest salary, average basic and total salary package, and allowances by branch and type.</li>
+            </ul>
+            <p>Interactive charts and slicers allow dynamic filtering, with tooltips providing deeper detail on hover.</p>
+
+            <h2>How I Built It</h2>
+            <div class="detail-tools-row">
+                <span>Microsoft Power BI</span>
+            </div>
+            <p>Power BI was used end-to-end for data integration, transformation, modeling, and visualization.</p>
+
+            <h2>Key Insights</h2>
+            <ul class="detail-list">
+                <li><strong>Workforce demographics:</strong> Civil Projects has the highest headcount, and the workforce is male-dominant overall, with Civil and Marine Projects showing the strongest female representation.</li>
+                <li><strong>Attrition hotspots:</strong> Nitaqat and Alumco show higher attrition relative to their size, pointing to a need for targeted retention strategies.</li>
+                <li><strong>A young workforce:</strong> over 60% of employees have 0–10 years of experience, underscoring the value of mentorship and career-progression programs.</li>
+                <li><strong>Cost concentration:</strong> Civil and Marine Projects carry the highest HR costs and are worth a closer efficiency review.</li>
+                <li><strong>Compensation equity:</strong> salary packages and allowances vary meaningfully across branches, which matters for both internal fairness and external competitiveness.</li>
+            </ul>
+
+            <h2>Recommendations</h2>
+            <div class="detail-recommend-list">
+                <div class="detail-recommend-item">
+                    <h4>Targeted retention programs</h4>
+                    <p>Build retention initiatives for the branches and groups with the highest attrition to reduce turnover and improve stability.</p>
+                </div>
+                <div class="detail-recommend-item">
+                    <h4>Strategic workforce development</h4>
+                    <p>Invest in training for employees with 0–10 years of experience to nurture talent and improve engagement.</p>
+                </div>
+                <div class="detail-recommend-item">
+                    <h4>Cost optimization review</h4>
+                    <p>Run a detailed review of HR costs in the highest-expenditure branches to optimize budget allocation.</p>
+                </div>
+                <div class="detail-recommend-item">
+                    <h4>Compensation equity analysis</h4>
+                    <p>Analyze pay and allowance distribution across all branches to ensure fairness and stay competitive for top talent.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="detail-cta">
+            <a href="https://github.com/MariamHanafy14/HR-Analysis-Dasboard/blob/main/README.md" target="_blank" class="detail-github-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                View on GitHub
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mariam Hanafy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
