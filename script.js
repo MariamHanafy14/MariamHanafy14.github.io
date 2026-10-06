@@ -46,6 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ================================================== //
+    //              Hero Rotating Stats Ticker             //
+    // ================================================== //
+    const tickerItems = document.querySelectorAll('.hero-ticker .ticker-item');
+    if (tickerItems.length) {
+        let tickerIndex = 0;
+        tickerItems[0].classList.add('active');
+        setInterval(() => {
+            tickerItems[tickerIndex].classList.remove('active');
+            tickerIndex = (tickerIndex + 1) % tickerItems.length;
+            tickerItems[tickerIndex].classList.add('active');
+        }, 3200);
+    }
+
+    // ================================================== //
     //           Professional Theme Toggle Logic          //
     // ================================================== //
     const themeToggle = document.querySelector('#theme-toggle');
