@@ -110,13 +110,14 @@ main { padding-top: 60px; }
     z-index: 2;
     display: flex;
     align-items: center;
-    gap: 64px;
+    justify-content: center;
+    gap: 72px;
 }
 
 .hero-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 
 .hero-photo-col { flex-shrink: 0; }
-.hero-text-col { text-align: left; }
+.hero-text-col { text-align: left; max-width: 620px; }
 
 /* =================================================================== */
 /*          Hero Ambient Data-Chart Backdrop (Signature Element)       */
@@ -126,11 +127,13 @@ main { padding-top: 60px; }
     left: 0;
     right: 0;
     bottom: 0;
-    height: 38%;
+    height: 40%;
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
 }
+/* preserveAspectRatio="none" on the inner svg makes it stretch to fill this
+   band exactly, so the full curve (start to end) always shows, never cropped */
 .hero-chart-bg svg { width: 100%; height: 100%; display: block; }
 
 .hero-area-stop-top { stop-color: var(--primary-color); stop-opacity: 0.16; }
@@ -204,11 +207,6 @@ body.dark-mode .hero-area-stop-top { stop-opacity: 0.22; }
 }
 .ticker-item.active { opacity: 1; transform: translateY(0); }
 
-@media (max-width: 480px) {
-    .ticker-track { min-width: 0; white-space: normal; }
-    .ticker-item { white-space: normal; font-size: 0.85rem; line-height: 1.4; }
-}
-
 /* Greeting + dynamically typed name */
 .hero-greeting {
     font-size: 1.15rem;
@@ -220,8 +218,9 @@ body.dark-mode .hero-area-stop-top { stop-opacity: 0.22; }
 body.dark-mode .hero-greeting { color: var(--subtitle-color); }
 
 .hero-name {
-    font-size: 3rem;
+    font-size: 3.3rem;
     font-weight: 700;
+    letter-spacing: -0.01em;
     color: #6D5B97;
     margin-bottom: 14px;
     line-height: 1.15;
@@ -267,52 +266,100 @@ body.dark-mode .hero-name { color: #c3aed6; }
 .btn-secondary:hover { background: var(--primary-color); color: #fff; transform: translateY(-5px); }
 
 /* =================================================================== */
-/*          Hero Profile Photo — wavy / scalloped oval frame           */
+/*     Hero Profile Photo — layered organic blob frame (signature)     */
 /* =================================================================== */
 .hero-photo-frame {
     position: relative;
-    width: 260px;
-    height: 300px;
+    width: 320px;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Soft blurred "echo" blob, a different silhouette, drifting gently behind the photo */
 .hero-photo-frame::before {
     content: '';
     position: absolute;
-    inset: -14px;
-    background: radial-gradient(circle, rgba(109, 91, 151, 0.22), rgba(160, 210, 219, 0.08) 60%, transparent 75%);
-    border-radius: 50%;
-    filter: blur(2px);
+    inset: -38px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    clip-path: url(#blobEcho);
+    opacity: 0.3;
+    filter: blur(9px);
     z-index: 0;
+    animation: heroBlobDrift 16s ease-in-out infinite;
+}
+
+/* Thin gradient rim following the photo's exact organic contour */
+.hero-photo-frame::after {
+    content: '';
+    position: absolute;
+    inset: -9px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    clip-path: url(#blobPrimary);
+    z-index: 1;
+}
+
+@keyframes heroBlobDrift {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(7deg) scale(1.04); }
 }
 
 .hero-photo {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    clip-path: url(#wavyPhotoClip);
-    filter: drop-shadow(0 14px 30px rgba(109, 91, 151, 0.28));
-    transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+    clip-path: url(#blobPrimary);
+    filter: drop-shadow(0 18px 34px rgba(109, 91, 151, 0.3));
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
 }
 
 .hero-photo:hover {
-    transform: scale(1.045) rotate(-1deg);
-    filter: drop-shadow(0 18px 38px rgba(109, 91, 151, 0.35));
-}
-
-body.dark-mode .hero-photo-frame::before {
-    background: radial-gradient(circle, rgba(179, 157, 219, 0.3), rgba(140, 124, 168, 0.1) 60%, transparent 75%);
+    transform: scale(1.035) rotate(-1.2deg);
+    filter: drop-shadow(0 22px 42px rgba(109, 91, 151, 0.38));
 }
 
 body.dark-mode .hero-photo {
-    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.45));
+    filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.5));
 }
 body.dark-mode .hero-photo:hover {
-    filter: drop-shadow(0 18px 38px rgba(0, 0, 0, 0.55));
+    filter: drop-shadow(0 22px 42px rgba(0, 0, 0, 0.6));
+}
+
+/* Small floating skill badge, bottom-right of the frame */
+.photo-badge {
+    position: absolute;
+    z-index: 3;
+    bottom: 6%;
+    right: 0%;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 24px rgba(109, 91, 151, 0.28);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    animation: heroBadgeFloat 3.8s ease-in-out infinite;
+}
+.photo-badge svg { width: 24px; height: 24px; }
+
+@keyframes heroBadgeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+body.dark-mode .photo-badge {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-photo-frame::before { animation: none; }
+    .photo-badge { animation: none; }
 }
 
 /* =================================================================== */
@@ -1344,19 +1391,30 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
     /* Hero: stack photo above text, centered, and tighten vertical rhythm
        so social links land inside the first screen */
     #hero { padding: 100px 0 40px; min-height: auto; }
-    .hero-flex { flex-direction: column; text-align: center; gap: 26px; }
-    .hero-text-col { text-align: center; }
+    .hero-flex { flex-direction: column; text-align: center; gap: 30px; }
+    .hero-text-col { text-align: center; max-width: 440px; margin: 0 auto; }
     .hero-greeting { font-size: 1.05rem; }
     .hero-name { font-size: 2.3rem; margin-bottom: 10px; }
-    .hero-photo-frame { width: 190px; height: 220px; }
+    .hero-photo-frame { width: 240px; height: 270px; }
+    .photo-badge { width: 46px; height: 46px; }
+    .photo-badge svg { width: 20px; height: 20px; }
     .subtitle-wrapper { margin-bottom: 12px; }
-    .hero-ticker { justify-content: center; margin-bottom: 24px; }
-    .ticker-track { text-align: center; }
-    .ticker-item { left: 50%; transform: translate(-50%, 8px); }
-    .ticker-item.active { transform: translate(-50%, 0); }
+
+    /* Ticker: give the track real height so wrapped text never overlaps
+       the buttons/socials below it */
+    .hero-ticker { justify-content: center; margin-bottom: 24px; align-items: flex-start; }
+    .ticker-track { width: 100%; min-width: 0; min-height: 2.7em; text-align: center; }
+    .ticker-item {
+        left: 0; right: 0; width: 100%;
+        white-space: normal; text-align: center;
+        font-size: 0.85rem; line-height: 1.35;
+        transform: translateY(8px);
+    }
+    .ticker-item.active { transform: translateY(0); }
+
     .hero-buttons { justify-content: center; }
     .hero-socials { justify-content: center; margin-top: 20px; }
-    .hero-social-link { width: 40px; height: 40px; }
+    .hero-social-link { width: 42px; height: 42px; }
 
     .nav-links {
         position: fixed; top: 70px; left: 0; width: 100%; height: calc(100vh - 70px);
@@ -1401,6 +1459,6 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
 }
 
 @media (max-width: 420px) {
-    .hero-photo-frame { width: 150px; height: 175px; }
+    .hero-photo-frame { width: 200px; height: 225px; }
     .hero-name { font-size: 1.9rem; }
 }
