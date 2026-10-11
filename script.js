@@ -34,15 +34,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        const elements = Array.from(heroContent.children);
-        elements.forEach((element, i) => {
-            setTimeout(() => {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }, 300 * (i + 1));
-        });
+    const heroRevealEls = document.querySelectorAll('.hero-reveal');
+    heroRevealEls.forEach((element, i) => {
+        setTimeout(() => {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }, 220 * (i + 1));
+    });
+
+    // ================================================== //
+    //       Hero Name: dynamic typewriter (type/erase)    //
+    // ================================================== //
+    const typedNameEl = document.getElementById('heroTypedName');
+    if (typedNameEl) {
+        const fullName = 'Mariam Hanafy';
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+            typedNameEl.textContent = fullName;
+        } else {
+            const typeLoop = () => {
+                const typingSpeed = isDeleting ? 55 : 110;
+
+                if (!isDeleting && charIndex <= fullName.length) {
+                    typedNameEl.textContent = fullName.slice(0, charIndex);
+                    charIndex++;
+                    if (charIndex > fullName.length) {
+                        setTimeout(() => { isDeleting = true; typeLoop(); }, 1800);
+                        return;
+                    }
+                } else if (isDeleting && charIndex >= 0) {
+                    typedNameEl.textContent = fullName.slice(0, charIndex);
+                    charIndex--;
+                    if (charIndex < 0) {
+                        isDeleting = false;
+                        charIndex = 0;
+                        setTimeout(typeLoop, 500);
+                        return;
+                    }
+                }
+                setTimeout(typeLoop, typingSpeed);
+            };
+            setTimeout(typeLoop, 900);
+        }
     }
 
     // ================================================== //
