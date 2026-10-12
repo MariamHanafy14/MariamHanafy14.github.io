@@ -98,7 +98,7 @@ main { padding-top: 60px; }
 #hero {
     background: var(--hero-gradient);
     background-size: 150% 150%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
     padding: 110px 0 50px;
@@ -177,45 +177,16 @@ body.dark-mode .hero-area-stop-top { stop-opacity: 0.22; }
     .hero-chart-bar { animation: none; opacity: 0.16; transform: scaleY(1); }
 }
 
-/* Rotating stats ticker */
-.hero-ticker {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    margin: 0 0 30px;
-    color: var(--primary-color);
-}
-.hero-ticker .ticker-icon { width: 18px; height: 18px; flex-shrink: 0; }
-.ticker-track {
-    position: relative;
-    height: 1.4em;
-    min-width: 270px;
-    text-align: left;
-}
-.ticker-item {
-    position: absolute;
-    left: 0;
-    top: 0;
-    white-space: nowrap;
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-color);
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.ticker-item.active { opacity: 1; transform: translateY(0); }
-
 /* Greeting + dynamically typed name */
 .hero-greeting {
-    font-size: 1.15rem;
-    font-weight: 500;
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-bottom: 2px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    color: var(--primary-color);
+    margin-bottom: 6px;
 }
-body.dark-mode .hero-greeting { color: var(--subtitle-color); }
+body.dark-mode .hero-greeting { color: #c3aed6; }
 
 .hero-name {
     font-size: 3.3rem;
@@ -1385,36 +1356,30 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
     section { padding: 60px 0; }
     .container { padding: 0 15px; }
     h2 { font-size: 2.2rem; }
-    #subtitle { font-size: 1.4rem; }
-    .tagline { font-size: 1.05rem; margin-bottom: 28px; }
+    #subtitle { font-size: 1.3rem; }
+    .tagline { font-size: 1rem; margin-bottom: 18px; }
 
     /* Hero: stack photo above text, centered, and tighten vertical rhythm
-       so social links land inside the first screen */
-    #hero { padding: 100px 0 40px; min-height: auto; }
-    .hero-flex { flex-direction: column; text-align: center; gap: 30px; }
+       so the whole hero (including socials) fits inside the first screen */
+    #hero { padding: 90px 0 28px; min-height: auto; }
+    .hero-flex { flex-direction: column; text-align: center; gap: 20px; }
     .hero-text-col { text-align: center; max-width: 440px; margin: 0 auto; }
-    .hero-greeting { font-size: 1.05rem; }
-    .hero-name { font-size: 2.3rem; margin-bottom: 10px; }
-    .hero-photo-frame { width: 240px; height: 270px; }
-    .photo-badge { width: 46px; height: 46px; }
-    .photo-badge svg { width: 20px; height: 20px; }
-    .subtitle-wrapper { margin-bottom: 12px; }
+    .hero-greeting { font-size: 1.25rem; margin-bottom: 4px; }
+    .hero-name { font-size: 2.1rem; margin-bottom: 8px; }
+    .hero-photo-frame { width: 210px; height: 235px; }
+    .photo-badge { width: 44px; height: 44px; }
+    .photo-badge svg { width: 19px; height: 19px; }
+    .subtitle-wrapper { margin-bottom: 10px; }
 
-    /* Ticker: give the track real height so wrapped text never overlaps
-       the buttons/socials below it */
-    .hero-ticker { justify-content: center; margin-bottom: 24px; align-items: flex-start; }
-    .ticker-track { width: 100%; min-width: 0; min-height: 2.7em; text-align: center; }
-    .ticker-item {
-        left: 0; right: 0; width: 100%;
-        white-space: normal; text-align: center;
-        font-size: 0.85rem; line-height: 1.35;
-        transform: translateY(8px);
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
     }
-    .ticker-item.active { transform: translateY(0); }
-
-    .hero-buttons { justify-content: center; }
-    .hero-socials { justify-content: center; margin-top: 20px; }
-    .hero-social-link { width: 42px; height: 42px; }
+    .btn { padding: 11px 22px; font-size: 0.85rem; }
+    .hero-socials { justify-content: center; margin-top: 14px; }
+    .hero-social-link { width: 40px; height: 40px; }
 
     .nav-links {
         position: fixed; top: 70px; left: 0; width: 100%; height: calc(100vh - 70px);
@@ -1422,8 +1387,6 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
         align-items: center; gap: 40px; transform: translateX(100%);
         transition: transform 0.4s ease-in-out, background-color 0.5s ease; padding-bottom: 70px;
     }
-    .btn { padding: 12px 28px; font-size: 0.9rem; }
-    .hero-buttons { flex-direction: column; gap: 15px; align-items: center; }
 
     .nav-links.active { transform: translateX(0); }
     .nav-links a { font-size: 1.5rem; }
@@ -1459,6 +1422,10 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
 }
 
 @media (max-width: 420px) {
-    .hero-photo-frame { width: 200px; height: 225px; }
-    .hero-name { font-size: 1.9rem; }
+    #hero { padding: 85px 0 24px; }
+    .hero-flex { gap: 16px; }
+    .hero-photo-frame { width: 175px; height: 195px; }
+    .hero-name { font-size: 1.8rem; }
+    .tagline { margin-bottom: 14px; }
+    .btn { padding: 10px 18px; font-size: 0.8rem; }
 }
