@@ -98,10 +98,10 @@ main { padding-top: 60px; }
 #hero {
     background: var(--hero-gradient);
     background-size: 150% 150%;
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
-    padding: 110px 0 50px;
+    padding: 100px 0 40px;
     transition: background-position 0.1s linear, background 0.5s ease;
 }
 
@@ -241,8 +241,8 @@ body.dark-mode .hero-name { color: #c3aed6; }
 /* =================================================================== */
 .hero-photo-frame {
     position: relative;
-    width: 320px;
-    height: 360px;
+    width: 400px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1357,19 +1357,22 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
     .container { padding: 0 15px; }
     h2 { font-size: 2.2rem; }
     #subtitle { font-size: 1.3rem; }
-    .tagline { font-size: 1rem; margin-bottom: 18px; }
+    .tagline { font-size: 0.95rem; margin-bottom: 12px; }
 
     /* Hero: stack photo above text, centered, and tighten vertical rhythm
-       so the whole hero (including socials) fits inside the first screen */
-    #hero { padding: 90px 0 28px; min-height: auto; }
-    .hero-flex { flex-direction: column; text-align: center; gap: 20px; }
+       so the whole hero (including socials) fits inside the first mobile
+       screen — space is reclaimed from padding/gaps/margins, not from the
+       photo or buttons, which are sized up instead */
+    main { padding-top: 56px; }
+    #hero { padding: 62px 0 14px; min-height: 100vh; }
+    .hero-flex { flex-direction: column; text-align: center; gap: 12px; }
     .hero-text-col { text-align: center; max-width: 440px; margin: 0 auto; }
-    .hero-greeting { font-size: 1.25rem; margin-bottom: 4px; }
-    .hero-name { font-size: 2.1rem; margin-bottom: 8px; }
-    .hero-photo-frame { width: 210px; height: 235px; }
-    .photo-badge { width: 44px; height: 44px; }
-    .photo-badge svg { width: 19px; height: 19px; }
-    .subtitle-wrapper { margin-bottom: 10px; }
+    .hero-greeting { font-size: 1.15rem; margin-bottom: 2px; }
+    .hero-name { font-size: 1.95rem; margin-bottom: 6px; }
+    .hero-photo-frame { width: 232px; height: 258px; }
+    .photo-badge { width: 46px; height: 46px; }
+    .photo-badge svg { width: 20px; height: 20px; }
+    .subtitle-wrapper { margin-bottom: 6px; }
 
     .hero-buttons {
         justify-content: center;
@@ -1377,9 +1380,9 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
         flex-wrap: wrap;
         gap: 12px;
     }
-    .btn { padding: 11px 22px; font-size: 0.85rem; }
-    .hero-socials { justify-content: center; margin-top: 14px; }
-    .hero-social-link { width: 40px; height: 40px; }
+    .btn { padding: 13px 27px; font-size: 0.92rem; }
+    .hero-socials { justify-content: center; margin-top: 8px; gap: 10px; }
+    .hero-social-link { width: 38px; height: 38px; }
 
     .nav-links {
         position: fixed; top: 70px; left: 0; width: 100%; height: calc(100vh - 70px);
@@ -1422,10 +1425,16 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
 }
 
 @media (max-width: 420px) {
-    #hero { padding: 85px 0 24px; }
-    .hero-flex { gap: 16px; }
-    .hero-photo-frame { width: 175px; height: 195px; }
-    .hero-name { font-size: 1.8rem; }
-    .tagline { margin-bottom: 14px; }
-    .btn { padding: 10px 18px; font-size: 0.8rem; }
+    main { padding-top: 52px; }
+    #hero { padding: 50px 0 12px; }
+    .hero-flex { gap: 10px; }
+    .hero-greeting { font-size: 1.05rem; }
+    .hero-photo-frame { width: 198px; height: 220px; }
+    .photo-badge { width: 40px; height: 40px; }
+    .hero-name { font-size: 1.65rem; margin-bottom: 4px; }
+    .subtitle-wrapper { margin-bottom: 4px; }
+    .tagline { font-size: 0.88rem; margin-bottom: 10px; }
+    .btn { padding: 12px 20px; font-size: 0.85rem; }
+    .hero-socials { margin-top: 6px; gap: 8px; }
+    .hero-social-link { width: 34px; height: 34px; }
 }
