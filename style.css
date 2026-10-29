@@ -1499,3 +1499,51 @@ body.dark-mode .award-strip { border-color: rgba(179, 157, 219, 0.4); }
     .award-thumb { width: 96px; height: 68px; }
     .award-title { font-size: 0.92rem; }
 }
+
+/* Academic honor variant (Education section) */
+.award-honor {
+    margin-top: 26px;
+    background: linear-gradient(135deg, rgba(255, 214, 120, 0.22), rgba(109, 91, 151, 0.10));
+    border: 1px solid rgba(214, 165, 40, 0.55);
+    position: relative;
+    overflow: hidden;
+}
+.award-honor::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -60%;
+    width: 40%; height: 100%;
+    background: linear-gradient(115deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: skewX(-20deg);
+    animation: honorShine 5s ease-in-out infinite;
+    pointer-events: none;
+}
+@keyframes honorShine { 0%, 60% { left: -60%; } 100% { left: 140%; } }
+.award-honor:hover { border-style: solid; border-color: #d6a528; box-shadow: 0 10px 28px rgba(214, 165, 40, 0.25); }
+.award-honor .award-kicker { color: #b8860b; }
+body.dark-mode .award-honor { border-color: rgba(230, 190, 90, 0.5); }
+body.dark-mode .award-honor .award-kicker { color: #e6be5a; }
+.honor-rank {
+    flex-shrink: 0;
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: radial-gradient(circle at 30% 25%, #ffe9a8, #e0aa2c 70%, #b8860b);
+    color: #5a3d00;
+    box-shadow: 0 6px 16px rgba(184, 134, 11, 0.4), inset 0 0 0 3px rgba(255,255,255,0.45);
+    line-height: 1;
+}
+.honor-rank-num { font-size: 1.9rem; font-weight: 800; }
+.honor-rank-num sup { font-size: 0.8rem; font-weight: 700; margin-left: 1px; }
+.honor-rank-label { font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 3px; }
+.award-honor .award-text { flex: 1; }
+.award-honor .award-thumb { transform: rotate(3deg); }
+.award-honor:hover .award-thumb { transform: rotate(0deg) scale(1.05); }
+
+@media (max-width: 600px) {
+    .award-honor { flex-wrap: wrap; justify-content: center; text-align: center; }
+    .award-honor .award-text { align-items: center; flex-basis: 100%; order: 2; }
+    .award-honor .award-thumb { order: 3; width: 150px; height: 106px; }
+    .honor-rank { order: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .award-honor::before { animation: none; } }
