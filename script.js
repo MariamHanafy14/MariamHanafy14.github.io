@@ -124,6 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Certificate preview inside the volunteering timeline
+    document.querySelectorAll('.award-strip').forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.style.display = "block";
+            modalImg.src = btn.dataset.image;
+        });
+    });
+
     if (closeModal) {
         closeModal.addEventListener('click', function() {
             modal.style.display = "none";

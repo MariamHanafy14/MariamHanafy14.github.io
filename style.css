@@ -1440,3 +1440,62 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
     .hero-socials { margin-top: 6px; gap: 8px; }
     .hero-social-link { width: 37px; height: 37px; }
 }
+/* =================================================================== */
+/*          Award strip (certificate preview inside a timeline card)   */
+/* =================================================================== */
+.award-strip {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px 18px;
+    text-align: left;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(160, 210, 219, 0.18), rgba(109, 91, 151, 0.10));
+    border: 1px dashed rgba(109, 91, 151, 0.4);
+    border-radius: 14px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.award-strip:hover {
+    transform: translateY(-3px);
+    border-style: solid;
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(109, 91, 151, 0.16);
+}
+.award-thumb {
+    position: relative;
+    flex-shrink: 0;
+    width: 120px;
+    height: 84px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid var(--card-bg);
+    box-shadow: 0 6px 16px rgba(109, 91, 151, 0.25);
+    transform: rotate(-3deg);
+    transition: transform 0.35s ease;
+}
+.award-strip:hover .award-thumb { transform: rotate(0deg) scale(1.05); }
+.award-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.award-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.award-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.award-title { font-size: 1rem; font-weight: 600; color: var(--heading-color); line-height: 1.35; }
+.award-hint { font-size: 0.8rem; opacity: 0.65; }
+body.dark-mode .award-strip { border-color: rgba(179, 157, 219, 0.4); }
+
+@media (max-width: 480px) {
+    .award-strip { gap: 14px; padding: 12px; }
+    .award-thumb { width: 96px; height: 68px; }
+    .award-title { font-size: 0.92rem; }
+}
