@@ -101,7 +101,7 @@ main { padding-top: 60px; }
     min-height: 95vh;
     display: flex; align-items: center; justify-content: center;
     position: relative; overflow: hidden;
-    padding: px 0 40px;
+    padding: 100px 0 40px;
     transition: background-position 0.1s linear, background 0.5s ease;
 }
 
@@ -1356,23 +1356,24 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
     section { padding: 60px 0; }
     .container { padding: 0 15px; }
     h2 { font-size: 2.2rem; }
-    #subtitle { font-size: 1.3rem; }
     .tagline { font-size: 0.95rem; margin-bottom: 12px; }
 
     /* Hero: stack photo above text, centered, and tighten vertical rhythm
        so the whole hero (including socials) fits inside the first mobile
        screen — space is reclaimed from padding/gaps/margins, not from the
        photo or buttons, which are sized up instead */
-    main { padding-top: 56px; }
-    #hero { padding: 62px 0 14px; min-height: 100vh; }
-    .hero-flex { flex-direction: column; text-align: center; gap: 12px; }
+    main { padding-top: 40px; }
+    #hero { padding: 34px 0 12px; min-height: 100vh; }
+    .hero-flex { flex-direction: column; text-align: center; gap: 10px; }
     .hero-text-col { text-align: center; max-width: 440px; margin: 0 auto; }
-    .hero-greeting { font-size: 1.15rem; margin-bottom: 2px; }
-    .hero-name { font-size: 1.95rem; margin-bottom: 6px; }
-    .hero-photo-frame { width: 232px; height: 258px; }
+    .hero-greeting { font-size: 1.22rem; margin-bottom: 2px; }
+    .hero-name { font-size: 2.15rem; margin-bottom: 8px; }
+    .hero-photo-frame { width: 275px; height: 306px; }
     .photo-badge { width: 46px; height: 46px; }
     .photo-badge svg { width: 20px; height: 20px; }
+    #subtitle { font-size: 1.4rem; }
     .subtitle-wrapper { margin-bottom: 6px; }
+    .tagline { font-size: 1rem; }
 
     .hero-buttons {
         justify-content: center;
@@ -1380,9 +1381,9 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
         flex-wrap: wrap;
         gap: 12px;
     }
-    .btn { padding: 13px 27px; font-size: 0.92rem; }
+    .btn { padding: 16px 32px; font-size: 1.02rem; }
     .hero-socials { justify-content: center; margin-top: 8px; gap: 10px; }
-    .hero-social-link { width: 38px; height: 38px; }
+    .hero-social-link { width: 42px; height: 42px; }
 
     .nav-links {
         position: fixed; top: 70px; left: 0; width: 100%; height: calc(100vh - 70px);
@@ -1425,16 +1426,17 @@ body.dark-mode .timeline-item:hover .timeline-tags span {
 }
 
 @media (max-width: 420px) {
-    main { padding-top: 52px; }
-    #hero { padding: 50px 0 12px; }
-    .hero-flex { gap: 10px; }
-    .hero-greeting { font-size: 1.05rem; }
-    .hero-photo-frame { width: 198px; height: 220px; }
+    main { padding-top: 40px; }
+    #hero { padding: 36px 0 10px; }
+    .hero-flex { gap: 8px; }
+    .hero-greeting { font-size: 1.1rem; }
+    .hero-photo-frame { width: 250px; height: 278px; }
     .photo-badge { width: 40px; height: 40px; }
-    .hero-name { font-size: 1.65rem; margin-bottom: 4px; }
+    .hero-name { font-size: 1.85rem; margin-bottom: 5px; }
+    #subtitle { font-size: 1.22rem; }
     .subtitle-wrapper { margin-bottom: 4px; }
-    .tagline { font-size: 0.88rem; margin-bottom: 10px; }
-    .btn { padding: 12px 20px; font-size: 0.85rem; }
+    .tagline { font-size: 0.94rem; margin-bottom: 10px; }
+    .btn { padding: 14px 25px; font-size: 0.96rem; }
     .hero-socials { margin-top: 6px; gap: 8px; }
-    .hero-social-link { width: 34px; height: 34px; }
+    .hero-social-link { width: 37px; height: 37px; }
 }
