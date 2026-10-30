@@ -171,6 +171,59 @@ document.addEventListener('DOMContentLoaded', function() {
     revealElements.forEach(el => revealObserver.observe(el));
 
     // ================================================== //
+    //              Project Filter (by tool)               //
+    // ================================================== //
+    const filterWrap = document.getElementById('projectFilters');
+    const filterCount = document.getElementById('filterCount');
+    const projectCards = Array.from(document.querySelectorAll('.projects-grid .project-card'));
+
+    if (filterWrap && projectCards.length) {
+        // Each card lists the categories it belongs to in data-filters
+        const cardFilters = projectCards.map(card =>
+            (card.dataset.filters || '').toLowerCase().split(' / ').join(' ')
+        );
+        const matches = (i, f) => f === 'all' || cardFilters[i].split(/\s+(?=power|excel|sql|n8n)/).includes(f);
+
+        const updateCount = (f, n) => {
+            if (!filterCount) return;
+            filterCount.textContent = f === 'all' ? '' : `Showing ${n} of ${projectCards.length} projects`;
+        };
+
+        filterWrap.addEventListener('click', (e) => {
+            const btn = e.target.closest('.filter-btn');
+            if (!btn || btn.classList.contains('active')) return;
+
+            filterWrap.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const f = btn.dataset.filter;
+            let shown = 0;
+
+            projectCards.forEach((card, i) => {
+                const show = matches(i, f);
+                if (show) shown++;
+                const isGone = card.classList.contains('filter-gone');
+
+                if (show && isGone) {
+                    card.classList.remove('filter-gone', 'filter-out');
+                    card.classList.add('revealed');
+                    card.classList.remove('filter-in');
+                    void card.offsetWidth;
+                    card.classList.add('filter-in');
+                } else if (!show && !isGone) {
+                    card.classList.add('filter-out');
+                    setTimeout(() => {
+                        if (card.classList.contains('filter-out')) card.classList.add('filter-gone');
+                    }, 260);
+                } else if (show) {
+                    card.classList.remove('filter-out');
+                }
+            });
+            updateCount(f, shown);
+        });
+    }
+
+    // ================================================== //
     //           Active Nav Link on Scroll                //
     // ================================================== //
     const sections = document.querySelectorAll('main section[id]');

@@ -1547,3 +1547,54 @@ body.dark-mode .award-honor .award-kicker { color: #e6be5a; }
     .honor-rank { order: 1; }
 }
 @media (prefers-reduced-motion: reduce) { .award-honor::before { animation: none; } }
+
+/* =================================================================== */
+/*                     Project Filter Buttons                          */
+/* =================================================================== */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: -20px auto 14px;
+}
+.filter-btn {
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 9px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: var(--primary-color);
+    background: var(--card-bg);
+    border: 1.5px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.filter-btn:hover { border-color: var(--primary-color); transform: translateY(-2px); }
+.filter-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 16px rgba(109, 91, 151, 0.28);
+}
+body.dark-mode .filter-btn.active { color: #161222; }
+.filter-count {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.65;
+    margin-bottom: 32px;
+    min-height: 1.4em;
+}
+.project-card.filter-out { opacity: 0 !important; transform: scale(0.94) !important; transition: opacity 0.25s ease, transform 0.25s ease; }
+.project-card.filter-gone { display: none !important; }
+.project-card.filter-in { animation: filterCardIn 0.45s cubic-bezier(0.25, 0.8, 0.25, 1); }
+@keyframes filterCardIn {
+    from { opacity: 0; transform: translateY(24px) scale(0.96); }
+    to { opacity: 1; transform: none; }
+}
+@media (max-width: 600px) {
+    .filter-btn { padding: 8px 16px; font-size: 0.85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .project-card.filter-in { animation: none; }
+}

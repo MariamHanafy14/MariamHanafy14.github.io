@@ -241,10 +241,18 @@
                 <span class="section-eyebrow">Selected Work</span>
                 <h2>Projects</h2>
                 <p class="section-intro">A collection of dashboards and analyses where raw data became a decision — built in Power BI, Excel, and SQL.</p>
+                <div class="project-filters" id="projectFilters" role="group" aria-label="Filter projects by tool">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="power bi">Power BI</button>
+                    <button type="button" class="filter-btn" data-filter="excel">Excel</button>
+                    <button type="button" class="filter-btn" data-filter="sql">SQL</button>
+                    <button type="button" class="filter-btn" data-filter="n8n">Automation</button>
+                </div>
+                <p class="filter-count" id="filterCount" aria-live="polite"></p>
                 <div class="projects-grid">
 
                     <!-- Medical Sales Performance Dashboard -->
-                    <div class="project-card">
+                    <div class="project-card" data-filters="power bi">
                         <div class="card-carousel">
                             <div class="card-carousel-track">
                                 <img src="Medical Sales Project/Medical_Sales_1.png" alt="Medical Sales Dashboard - Sales Analysis page">
@@ -271,7 +279,7 @@
                     </div>
 
                     <!-- Adventure Works -->
-                    <div class="project-card">
+                    <div class="project-card" data-filters="power bi sql">
                         <div class="card-carousel">
                             <div class="card-carousel-track">
                                 <img src="Adventure works project/Adventure_works_1.png" alt="Adventure Works Dashboard page 1">
@@ -302,7 +310,7 @@
                     </div>
 
                     <!-- HR Analysis -->
-                    <div class="project-card">
+                    <div class="project-card" data-filters="power bi">
                         <div class="card-carousel">
                             <div class="card-carousel-track">
                                 <img src="HR project/HR_1.png" alt="HR Analysis Dashboard - Overview page">
@@ -327,7 +335,7 @@
                     </div>
 
                     <!-- Sales Analysis Dashboard (Excel) -->
-                    <div class="project-card">
+                    <div class="project-card" data-filters="excel">
                         <div class="card-carousel">
                             <div class="card-carousel-track">
                                 <img src="Sales project/Sales_excel_1.png" alt="Sales Analysis Dashboard - page 1">
@@ -352,7 +360,7 @@
                     </div>
 
                     <!-- Udemy -->
-                    <div class="project-card">
+                    <div class="project-card" data-filters="power bi">
                         <div class="card-carousel">
                             <div class="card-carousel-track">
                                 <video src="UDEMY courses project/Udemy courses Dashboard video.mp4" muted loop playsinline preload="metadata"></video>
@@ -373,7 +381,7 @@
                     </div>
 
                     <!-- CallSentier -->
-                    <div class="project-card">
+                    <div class="project-card" data-filters="excel n8n">
                         <div class="card-carousel">
                             <div class="card-carousel-track">
                                 <img src="Call Sentier project/Call_Sentier_1.png" alt="CallSentier Dashboard">
